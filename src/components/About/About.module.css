@@ -1,0 +1,106 @@
+.about {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(5, 150, 105, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(22, 163, 74, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.about > * {
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    margin: 0 0 24px 0;
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 700;
+    background: var(--forest-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--nature-gradient);
+    border-radius: 2px;
+}
+
+.p{
+    color: #64748b;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: clamp(16px, 2.5vw, 18px);
+    padding: 0 20px;
+    text-align: center;
+    margin-left: 15%;
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 60px 20px;
+    }
+    
+    h2 {
+        font-size: clamp(24px, 7vw, 32px);
+        margin-bottom: 20px;
+    }
+    
+    h2::after {
+        width: 40px;
+        height: 2px;
+        bottom: -6px;
+    }
+    
+    .p {
+        font-size: clamp(14px, 4vw, 16px);
+        padding: 0 10px;
+        line-height: 1.7;
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        padding: 50px 16px;
+    }
+    
+    h2 {
+        font-size: clamp(20px, 8vw, 28px);
+        margin-bottom: 16px;
+    }
+    
+    h2::after {
+        width: 30px;
+        height: 2px;
+    }
+    
+    .p {
+        font-size: clamp(13px, 4.5vw, 15px);
+        padding: 0;
+    }
+}

@@ -1,0 +1,213 @@
+{
+    "header": {
+        "brand": "MangyTour",
+        "title": "Welcome to Mangystau",
+        "subtitle": "Travel, nature and inspiration",
+        "nav": {
+            "about": "About",
+            "destinations": "Destinations",
+            "gallery": "Gallery",
+            "contact": "Contact"
+        }
+    },
+
+    "aboutProject": {
+        "hero": {
+            "title": "MangyTour: AI guide to Mangystau",
+            "subtitle": "A digital platform that unites nature, culture and intelligent recommendations.",
+            "tagline": "Personalized • Navigation • Innovation"
+        },
+        "problem": {
+            "title": "The problem",
+            "paragraph1": "Mangystau is home to unique canyons, sacred rock formations and coastal landscapes, yet many of them are poorly visible on the tourist map.",
+            "paragraph2": "Information is fragmented, multilingual guides are scarce, navigation is complex. Without a digital ecosystem, the region’s economic and cultural potential remains underused."
+        },
+        "solution": {
+            "title": "The solution",
+            "intro": "MangyTour is an AI-powered mobile app and Telegram guide. It aggregates routes, provides accurate data, personalized suggestions and convenient navigation.",
+            "ai": {
+                "title": "AI capabilities",
+                "items": [
+                    "🤖 Personal route generator (nature, culture, extreme, spiritual)",
+                    "💬 Multilingual chat guide (Kazakh, Russian, English)",
+                    "🖼️ Photo recognition with explanations",
+                    "🌦️ Context-aware tips based on weather and conditions",
+                    "♻️ Eco-balance: distribution of visitor flows"
+                ]
+            },
+            "conclusion": "MangyTour delivers not just routes, but emotions and deep experiences."
+        },
+        "impact": {
+            "title": "Impact",
+            "items": [
+                "🌍 Heritage becomes globally visible",
+                "👥 New jobs for locals: guides, artisans, youth",
+                "📉 Lower unemployment and higher civic activity",
+                "💻 Digitized tourism aligned with global standards",
+                "🚀 Stronger regional brand, more investment and visitors"
+            ]
+        },
+        "cta": {
+            "title": "Let’s grow MangyTour together!",
+            "subtitle": "Get in touch about partnership, investment or volunteering.",
+            "primary": "Explore features",
+            "secondary": "Contact us"
+        }
+    },
+
+    "hero": {
+        "heading": "Discover the wonders of Mangystau",
+        "description": "Canyons, mountains and the Caspian coast — top spots, practical tips and trip planning in one place.",
+        "ctaPrimary": "Start exploring",
+        "ctaSecondary": "Contact us"
+    },
+
+    "about": {
+        "title": "About the project",
+        "content": "TravelX Mangystau is your guide to the region’s most exciting natural and cultural places. We share practical advice, routes and helpful information."
+    },
+
+    "Destinations": {
+        "title": "Popular destinations",
+        "places": [
+            "Bozzhyra Canyon",
+            "Sherkala Mountain",
+            "Coastal Routes"
+        ]
+    },
+
+    "destinations": {
+        "title": "Popular destinations",
+        "viewMore": "View details",
+        "more": "More →"
+    },
+
+    "Gallery": {
+        "title": "Photo gallery",
+        "description": "A collection of the most beautiful views and moments from Mangystau."
+    },
+
+    "Contact": {
+        "title": "Get in touch",
+        "description": "Have questions? Send us a message — we’re happy to help!"
+    },
+
+    "contact": {
+        "title": "Contact",
+        "lead": "Have questions or need a custom route? Leave a message.",
+        "notice": "* required fields. Your data is sent directly via Telegram.",
+        "placeholders": {
+            "name": "Your name *",
+            "phone": "Your phone * (+7 705 123 4567)",
+            "message": "Tell us what you’re planning * (e.g., a 3-day trip to Mangystau)"
+        },
+        "actions": {
+            "submit": "📱 Send to Telegram",
+            "write": "💬 Message directly"
+        },
+        "alerts": {
+            "fillFields": "Please fill in all fields!",
+            "sentThanks": "Thanks, {{name}}! Your request has been sent via Telegram."
+        },
+        "telegram": {
+            "newRequest": "New request",
+            "name": "Name",
+            "phone": "Phone",
+            "message": "Message"
+        }
+    },
+
+    "destinationPage": {
+        "back": "← Back",
+        "descriptionTitle": "Description",
+        "detailsTitle": "Details",
+        "highlightsTitle": "Highlights",
+        "videoTitle": "🎥 Video",
+        "mapTitle": "🗺️ View on map",
+        "coordsLabel": "Coordinates",
+        "detailLabels": {
+            "location": "📍 Location:",
+            "bestTime": "⏰ Best time:",
+            "duration": "⏱️ Duration:",
+            "distance": "🚗 Distance:",
+            "difficulty": "⚡ Difficulty:"
+        },
+        "actions": {
+            "openInMaps": "🗺️ Open in Google Maps",
+            "copyCoords": "📋 Copy coordinates",
+            "backToList": "📋 View all destinations",
+            "copied": "Coordinates copied!",
+            "go": "Go",
+            "byCar": "🚗 By car",
+            "byBus": "🚌 By bus"
+        },
+        "notFoundTitle": "Destination not found",
+        "backHome": "Back to home"
+        },
+        "footer": {
+            "privacy": "Privacy",
+            "terms": "Terms"
+            },
+            "destinationData": {
+                "1": {
+                    "title": "Bozzhyra Canyon",
+                    "excerpt": "Dramatic cliffs and salt flats — perfect for sunrise photography.",
+                    "fullDescription": "Bozzhyra Canyon is one of Mangystau’s most spectacular natural wonders. Formed over millions of years, its unique landforms captivate with layered geology, striking rock formations and sweeping vistas.",
+                    "details": {
+                        "location": "Mangystau Region, Karakiya District",
+                        "bestTime": "May–September, early morning or late evening",
+                        "duration": "1–2 days",
+                        "distance": "170 km from Aktau",
+                        "difficulty": "Moderate",
+                        "highlights": [
+                            "🌅 Stunning sunrises and sunsets",
+                            "📸 Perfect photo spots",
+                            "🏔️ Unique geological layers",
+                            "🌟 Stargazing at night",
+                            "🚗 Off-road adventures",
+                            "🏕️ Camping opportunities"
+                        ]
+                    }
+                },
+                "2": {
+                    "title": "Sherkala Mountain",
+                    "excerpt": "Iconic mountain and ancient routes with breathtaking views.",
+                    "fullDescription": "Sherkala is a symbol of Mangystau. The mountain’s distinctive shape is surrounded by legends and revered by locals as a sacred landmark.",
+                    "details": {
+                        "location": "Mangystau Region, Beineu District",
+                        "bestTime": "April–October",
+                        "duration": "Half-day",
+                        "distance": "170 km from Aktau",
+                        "difficulty": "Easy",
+                        "highlights": [
+                            "🏛️ Historical significance",
+                            "🎯 Unique for photoshoots",
+                            "🚶‍♂️ Light hiking",
+                            "📚 Local legends",
+                            "🌄 Panoramic views",
+                            "🦅 Wildlife watching"
+                        ]
+                    }
+                },
+                "3": {
+                    "title": "Coastal Routes",
+                    "excerpt": "Hidden bays of the Caspian Sea and traditional fishing villages.",
+                    "fullDescription": "Explore hidden coves, ancient settlements and traditional fishing villages along the stunning Caspian coastline — a blend of natural beauty and cultural heritage.",
+                    "details": {
+                        "location": "Caspian Sea coast",
+                        "bestTime": "May–September",
+                        "duration": "2–3 days",
+                        "distance": "50–200 km from Aktau",
+                        "difficulty": "Easy",
+                        "highlights": [
+                            "🏖️ Pristine beaches",
+                            "🐟 Fishing",
+                            "🏘️ Local culture",
+                            "🌊 Sea trips",
+                            "🍽️ Local cuisine",
+                            "⛵ Water sports"
+                        ]
+                    }
+                }
+            }
+}

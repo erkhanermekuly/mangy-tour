@@ -1,0 +1,390 @@
+.gallery {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 80% 20%, rgba(5, 150, 105, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(22, 163, 74, 0.06) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.gallery > * {
+    position: relative;
+    z-index: 1;
+}
+
+.gallery h4 {
+    margin-bottom: 48px;
+    text-align: center;
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 700;
+    background: var(--forest-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+    position: relative;
+}
+
+.gallery h4::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--nature-gradient);
+    border-radius: 2px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 бағанада бірдей ені */
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.item {
+    overflow: hidden;
+    border-radius: 16px;
+    height: 280px; /* Бірдей биіктік */
+    position: relative;
+    box-shadow: 
+        0 10px 25px -5px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(5, 150, 105, 0.1), rgba(22, 163, 74, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+        0 25px 50px -12px rgba(0, 0, 0, 0.15),
+        0 10px 20px -5px rgba(5, 150, 105, 0.2);
+}
+
+.item:hover::before {
+    opacity: 1;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.item:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay элементтері */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+}
+
+.item:hover .overlay {
+    opacity: 1;
+}
+
+.viewIcon {
+    font-size: 36px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Модальды терезе стильдері */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+.modalContent {
+    position: relative;
+    width: 80vw;
+    height: 70vh;
+    max-width: 1000px;
+    max-height: 700px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.closeBtn:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+}
+
+.modalImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 25px;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.navBtn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.counter {
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 60px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        padding: 60px 20px;
+    }
+    
+    .gallery h4 {
+        font-size: clamp(24px, 7vw, 32px);
+        margin-bottom: 32px;
+    }
+    
+    .gallery h4::after {
+        width: 40px;
+        height: 2px;
+        bottom: -8px;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 бағанада планшетте */
+        gap: 16px;
+        padding: 0 10px;
+    }
+
+    .item {
+        height: 200px; /* Бірдей биіктік мобильде */
+        border-radius: 12px;
+    }
+
+    /* Модальды терезе мобильде */
+    .modalContent {
+        width: 95vw;
+        height: 60vh;
+        max-width: none;
+        max-height: none;
+    }
+
+    .navigation {
+        bottom: 10px;
+        gap: 15px;
+        padding: 8px 16px;
+    }
+
+    .navBtn {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+    .counter {
+        font-size: 12px;
+        min-width: 50px;
+    }
+
+    .viewIcon {
+        font-size: 28px;
+    }
+    
+    .closeBtn {
+        width: 36px;
+        height: 36px;
+        top: 12px;
+        right: 12px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        padding: 50px 16px;
+    }
+    
+    .gallery h4 {
+        font-size: clamp(20px, 8vw, 28px);
+        margin-bottom: 24px;
+    }
+    
+    .gallery h4::after {
+        width: 30px;
+        height: 2px;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 0;
+    }
+
+    .item {
+        height: 180px; /* Бірдей биіктік кішкентай экранда */
+        border-radius: 10px;
+    }
+
+    .modalContent {
+        width: 95vw;
+        height: 50vh;
+        border-radius: 12px;
+    }
+
+    .navigation {
+        gap: 10px;
+        padding: 6px 12px;
+    }
+
+    .navBtn {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+    
+    .viewIcon {
+        font-size: 24px;
+    }
+    
+    .closeBtn {
+        width: 32px;
+        height: 32px;
+        top: 10px;
+        right: 10px;
+        font-size: 16px;
+    }
+}
+
+/* Қараңғы режим стильдері */
+[data-theme="dark"] .modalContent {
+    background: var(--dark-card);
+}
+
+[data-theme="dark"] .closeBtn {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--dark-text);
+}
+
+[data-theme="dark"] .closeBtn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .navigation {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--dark-text);
+}
+
+[data-theme="dark"] .navBtn {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--dark-text);
+}
+
+[data-theme="dark"] .navBtn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}

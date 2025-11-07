@@ -1,0 +1,92 @@
+.btn{
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--nature-gradient);
+    color: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 
+        0 10px 25px rgba(5, 150, 105, 0.3),
+        0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover::before {
+    opacity: 1;
+}
+
+.btn:focus{
+    outline: 3px solid rgba(5, 150, 105, 0.5);
+    outline-offset: 4px;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .btn {
+        right: 20px;
+        bottom: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        box-shadow: 
+            0 8px 20px rgba(5, 150, 105, 0.25),
+            0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .btn:focus {
+        outline: 2px solid rgba(5, 150, 105, 0.5);
+        outline-offset: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        right: 16px;
+        bottom: 16px;
+        width: 46px;
+        height: 46px;
+        font-size: 18px;
+        box-shadow: 
+            0 6px 15px rgba(5, 150, 105, 0.2),
+            0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .btn:focus {
+        outline: 2px solid rgba(5, 150, 105, 0.4);
+        outline-offset: 2px;
+    }
+    
+    .btn:hover {
+        transform: translateY(-2px);
+    }
+}

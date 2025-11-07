@@ -1,0 +1,343 @@
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+  color: #1e293b;
+  transition: all 0.3s ease;
+}
+
+.brand:hover {
+  transform: scale(1.05);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: rotate(5deg);
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav a {
+  color: #64748b;
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+}
+
+.nav a::before {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--nature-gradient);
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+
+.nav a:hover {
+  color: var(--nature-green);
+  background: rgba(5, 150, 105, 0.1);
+  transform: translateY(-2px);
+}
+
+.nav a:hover::before {
+  width: 24px;
+}
+
+.cta {
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.cta:hover {
+  background: var(--forest-gradient);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(5, 150, 105, 0.4);
+}
+
+.cta:hover::before {
+  left: 100%;
+}
+
+/* Language switcher */
+.langSwitcher {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.langBtn {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  background: rgba(255, 255, 255, 0.6);
+  color: #334155;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease;
+}
+
+.langBtn:hover {
+  background: rgba(5, 150, 105, 0.08);
+  border-color: rgba(5, 150, 105, 0.4);
+  color: #047857;
+}
+
+.active {
+  background: rgba(5, 150, 105, 0.12);
+  border-color: rgba(5, 150, 105, 0.6);
+  color: #047857;
+}
+
+.themeToggle {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.themeToggle:hover {
+  background: rgba(5, 150, 105, 0.1);
+  border-color: var(--nature-green);
+  transform: scale(1.1);
+}
+
+/* Түнгі режим стильдері */
+.header.dark {
+  background: rgba(30, 41, 59, 0.95);
+  border-bottom: 1px solid rgba(71, 85, 105, 0.5);
+}
+
+.header.dark .brand {
+  color: #e2e8f0;
+}
+
+.header.dark .nav a {
+  color: #cbd5e1;
+}
+
+.header.dark .nav a:hover {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.header.dark .themeToggle {
+  background: rgba(51, 65, 85, 0.3);
+  border-color: rgba(71, 85, 105, 0.5);
+}
+
+.header.dark .langBtn {
+  background: rgba(51, 65, 85, 0.3);
+  border-color: rgba(71, 85, 105, 0.5);
+  color: #e2e8f0;
+}
+
+.header.dark .langBtn:hover {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.6);
+  color: #10b981;
+}
+
+/* Hamburger мәзір стильдері */
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menuToggle span {
+  width: 100%;
+  height: 3px;
+  background: var(--nature-green);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menuToggle:hover span {
+  background: var(--forest-green);
+}
+
+.mobileMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  padding: 20px;
+  transform: translateY(-20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.mobileMenu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobileMenu a {
+  color: #64748b;
+  padding: 16px 0;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.3);
+  transition: all 0.3s ease;
+}
+
+.mobileMenu a:last-child {
+  border-bottom: none;
+}
+
+.mobileMenu a:hover {
+  color: var(--nature-green);
+  padding-left: 12px;
+}
+
+.header.dark .mobileMenu {
+  background: rgba(30, 41, 59, 0.98);
+  border-top-color: rgba(71, 85, 105, 0.5);
+}
+
+.header.dark .mobileMenu a {
+  color: #cbd5e1;
+  border-bottom-color: rgba(71, 85, 105, 0.3);
+}
+
+.header.dark .mobileMenu a:hover {
+  color: #10b981;
+}
+
+
+@media (max-width: 768px) {
+  .row {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  .nav {
+    gap: 12px;
+  }
+  
+  .nav a:not(.themeToggle) {
+    display: none;
+  }
+  
+  .menuToggle {
+    display: flex;
+  }
+  
+  .mobileMenu {
+    display: flex;
+  }
+  
+  .themeToggle {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+  
+  .brand {
+    font-size: 18px;
+  }
+  
+  .logo {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .brand {
+    font-size: 16px;
+  }
+  
+  .logo {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .mobileMenu {
+    padding: 16px;
+  }
+  
+  .mobileMenu a {
+    padding: 14px 0;
+  }
+
+  .mobileLangSwitcher {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+  }
+}

@@ -1,0 +1,687 @@
+.destSection {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.destSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.06) 0%, transparent 60%),
+        radial-gradient(circle at 70% 80%, rgba(168, 85, 247, 0.06) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.destSection h3 {
+    margin-bottom: 48px;
+    text-align: center;
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 700;
+    background: var(--forest-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 1;
+}
+
+.destSection h3::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--nature-gradient);
+    border-radius: 2px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.h2{
+    margin-left: 15%;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 
+        0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.cardLink {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(5, 150, 105, 0.03), rgba(22, 163, 74, 0.03));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 
+        0 35px 60px -12px rgba(0, 0, 0, 0.15),
+        0 20px 25px -5px rgba(5, 150, 105, 0.2);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.media {
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+}
+
+.media::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
+    z-index: 2;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(5, 150, 105, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.viewMore {
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: 2px solid white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.overlay:hover .viewMore {
+    background: white;
+    color: var(--nature-green);
+}
+
+.media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .media img {
+    transform: scale(1.1);
+}
+
+.body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1.3;
+}
+
+p {
+    margin: 0;
+    color: #64748b;
+    flex: 1;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.link {
+    margin-top: 16px;
+    color: var(--nature-green);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--nature-gradient);
+    transition: width 0.3s ease;
+}
+
+.link:hover {
+    color: var(--forest-green);
+    transform: translateX(4px);
+}
+
+.link:hover::after {
+    width: 100%;
+}
+
+/* Модальды терезе стильдері */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.modal {
+    background: white;
+    border-radius: 24px;
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+    color: #374151;
+}
+
+.closeBtn:hover {
+    background: #f3f4f6;
+    transform: scale(1.1);
+}
+
+.modalContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+}
+
+.modalImage {
+    position: relative;
+    overflow: hidden;
+}
+
+.modalImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modalInfo {
+    padding: 40px;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+.modalInfo h2 {
+    font-size: 28px;
+    color: var(--forest-green);
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.fullDesc {
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    font-size: 16px;
+}
+
+.details {
+    background: rgba(5, 150, 105, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--nature-green);
+}
+
+.detailItem {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.detailItem:last-child {
+    margin-bottom: 0;
+}
+
+.detailItem strong {
+    color: var(--forest-green);
+    min-width: 140px;
+}
+
+.highlights h4 {
+    color: var(--forest-green);
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.highlights ul {
+    list-style: none;
+    padding: 0;
+}
+
+.highlights li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+}
+
+.highlights li:last-child {
+    border-bottom: none;
+}
+
+/* Видео и карта секции */
+.videoSection, .mapSection {
+    margin-top: 24px;
+}
+
+.videoSection h4, .mapSection h4 {
+    color: var(--forest-green);
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.videoWrapper, .mapWrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.videoWrapper iframe, .mapWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.mapWrapper {
+    padding-bottom: 40%; /* Карта немного меньше по высоте */
+}
+
+.modalActions {
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.shareBtn {
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #e2e8f0;
+    background: #f8fafc;
+    color: #64748b;
+    flex: 1;
+    min-width: 200px;
+}
+
+.shareBtn:hover {
+    background: var(--nature-green);
+    color: white;
+    border-color: var(--nature-green);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
+}
+
+/* Responsive дизайн модальтердін */
+@media (max-width: 768px) {
+    .destSection {
+        padding: 60px 20px;
+    }
+    
+    .destSection h3 {
+        font-size: clamp(24px, 7vw, 32px);
+        margin-bottom: 32px;
+    }
+    
+    .destSection h3::after {
+        width: 40px;
+        height: 2px;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 0 10px;
+    }
+    
+    .card {
+        border-radius: 16px;
+    }
+    
+    .media {
+        height: 200px;
+    }
+    
+    .body {
+        padding: 20px;
+    }
+    
+    .body h4 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+    
+    .body p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .link {
+        font-size: 14px;
+        padding: 6px 0;
+    }
+    
+    /* Modal styles */
+    .modalContent {
+        grid-template-columns: 1fr;
+    }
+    
+    .modalImage {
+        height: 250px;
+    }
+    
+    .modalInfo {
+        padding: 24px;
+    }
+    
+    .modalInfo h2 {
+        font-size: 24px;
+    }
+    
+    .modalActions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .shareBtn {
+        min-width: auto;
+        padding: 12px 16px;
+        font-size: 13px;
+    }
+    
+    /* Видео и карта в мобильной версии */
+    .videoSection, .mapSection {
+        margin-top: 20px;
+    }
+    
+    .videoWrapper, .mapWrapper {
+        border-radius: 8px;
+    }
+    
+    .mapWrapper {
+        padding-bottom: 50%; /* Больше высоты для мобильных */
+    }
+    
+    .modal {
+        margin: 20px;
+        max-height: 80vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .destSection {
+        padding: 50px 16px;
+    }
+    
+    .destSection h3 {
+        font-size: clamp(20px, 8vw, 28px);
+        margin-bottom: 24px;
+    }
+    
+    .destSection h3::after {
+        width: 30px;
+        height: 2px;
+    }
+    
+    .grid {
+        gap: 20px;
+        padding: 0;
+    }
+    
+    .card {
+        border-radius: 12px;
+    }
+    
+    .media {
+        height: 180px;
+    }
+    
+    .body {
+        padding: 16px;
+    }
+    
+    .body h4 {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+    
+    .body p {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+    
+    .link {
+        font-size: 13px;
+        padding: 4px 0;
+    }
+    
+    /* Modal mobile styles */
+    .modal {
+        margin: 16px;
+        border-radius: 12px;
+    }
+    
+    .modalInfo {
+        padding: 20px;
+    }
+    
+    .modalInfo h2 {
+        font-size: 20px;
+    }
+    
+    .closeBtn {
+        width: 36px;
+        height: 36px;
+        top: 12px;
+        right: 12px;
+    }
+}
+
+/* Қараңғы режим стильдері */
+[data-theme="dark"] .modal {
+    background: var(--dark-card);
+    color: var(--dark-text);
+}
+
+[data-theme="dark"] .closeBtn {
+    background: rgba(55, 65, 81, 0.9);
+    color: var(--dark-text);
+}
+
+[data-theme="dark"] .closeBtn:hover {
+    background: #374151;
+}
+
+[data-theme="dark"] .modalInfo h2 {
+    color: var(--nature-green);
+}
+
+[data-theme="dark"] .fullDesc {
+    color: var(--dark-text-secondary);
+}
+
+[data-theme="dark"] .details {
+    background: rgba(5, 150, 105, 0.1);
+    border-left-color: var(--nature-green);
+}
+
+[data-theme="dark"] .highlights li {
+    border-bottom-color: #374151;
+}
+
+[data-theme="dark"] .shareBtn {
+    background: #374151;
+    color: var(--dark-text);
+    border-color: #4b5563;
+}
+
+[data-theme="dark"] .shareBtn:hover {
+    background: #4b5563;
+}
+
+/* Темная тема для видео и карты */
+[data-theme="dark"] .videoSection h4,
+[data-theme="dark"] .mapSection h4 {
+    color: var(--nature-green);
+}
+
+[data-theme="dark"] .videoWrapper,
+[data-theme="dark"] .mapWrapper {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .destSection {
+        padding: 60px 0;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 0 16px;
+    }
+
+    .media {
+        height: 200px;
+    }
+    
+    .body {
+        padding: 20px;
+    }
+    
+    .destSection h2::after {
+        width: 40px;
+        height: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        border-radius: 16px;
+    }
+    
+    .body {
+        padding: 16px;
+    }
+}
