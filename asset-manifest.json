@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/mangy-tour/static/css/main.59f244bf.css",
-    "main.js": "/mangy-tour/static/js/main.200e3f98.js",
+    "main.css": "/mangy-tour/static/css/main.26ce150c.css",
+    "main.js": "/mangy-tour/static/js/main.f26390f5.js",
     "static/media/background.jpg": "/mangy-tour/static/media/background.0bce4483e65bd6dab65f.jpg",
     "index.html": "/mangy-tour/index.html",
-    "main.59f244bf.css.map": "/mangy-tour/static/css/main.59f244bf.css.map",
-    "main.200e3f98.js.map": "/mangy-tour/static/js/main.200e3f98.js.map"
+    "main.26ce150c.css.map": "/mangy-tour/static/css/main.26ce150c.css.map",
+    "main.f26390f5.js.map": "/mangy-tour/static/js/main.f26390f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.59f244bf.css",
-    "static/js/main.200e3f98.js"
+    "static/css/main.26ce150c.css",
+    "static/js/main.f26390f5.js"
   ]
 }
