@@ -9,7 +9,7 @@ const destinations = [
     id: 1,
     title: "Бозжыра каньоны",
     excerpt: "Драмалық жарлар мен тұз жазықтары — күн шығу фотосуретін түсіру үшін тамаша.",
-    img: "/images/bozjyra.jpeg",
+    img: `${process.env.PUBLIC_URL || ''}/images/bozjyra.jpeg`,
     coordinates: {
       latitude: 43.6844,
       longitude: 52.4794
@@ -36,7 +36,7 @@ const destinations = [
     id: 2,
     title: "Шерқала тауы",
     excerpt: "Рәміздік тау және керемет көріністері бар ежелгі бағыттар.",
-    img: "/images/sherkala.webp",
+  img: `${process.env.PUBLIC_URL || ''}/images/sherkala.webp`,
     coordinates: {
       latitude: 43.7044,
       longitude: 51.9344
@@ -63,7 +63,7 @@ const destinations = [
     id: 3,
     title: "Жағалау жолдары",
     excerpt: "Каспий теңізіндегі жасырын ойпаттар мен дәстүрлі балықшы ауылдары.",
-    img: "/images/coastal.jpg",
+  img: `${process.env.PUBLIC_URL || ''}/images/coastal.jpg`,
     coordinates: {
       latitude: 44.5133,
       longitude: 50.2647

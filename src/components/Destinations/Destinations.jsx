@@ -6,10 +6,11 @@ import styles from "./Destination.module.css";
 
 export default function Destinations(){
   const { t } = useTranslation();
+  const base = process.env.PUBLIC_URL || '';
   const items = [
-    { id: 1, img: "/images/bozjyra.jpeg" },
-    { id: 2, img: "/images/sherkala.webp" },
-    { id: 3, img: "/images/coastal.jpg" }
+    { id: 1, img: `${base}/images/bozjyra.jpeg` },
+    { id: 2, img: `${base}/images/sherkala.webp` },
+    { id: 3, img: `${base}/images/coastal.jpg` }
   ];
 
   return (

@@ -32,7 +32,7 @@ export default function Header(){
         <div className={styles.row}>
           <div className={styles.brand}>
             <Link to="/">
-              <img src="/images/logo.png" alt="logo" className={styles.logo}/>
+              <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="logo" className={styles.logo}/>
               <span>{t('header.brand', { defaultValue: 'MangyTour' })}</span>
             </Link>
           </div>
@@ -88,14 +88,14 @@ export default function Header(){
           <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.open : ''}`}>
             {isHomePage ? (
               <>
-                <a href="#about" onClick={() => setIsMobileMenuOpen(false)}>{t('header.nav.about')}</a>
+                <Link to="/about" onClick={() => setIsMobileMenuOpen(false)}>{t('header.nav.about')}</Link>
                 <a href="#destinations" onClick={() => setIsMobileMenuOpen(false)}>{t('header.nav.destinations')}</a>
                 <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)}>{t('header.nav.gallery')}</a>
                 <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>{t('header.nav.contact')}</a>
               </>
             ) : (
               <>
-                <Link to="/#about" onClick={() => setIsMobileMenuOpen(false)}>{t('header.nav.about')}</Link>
+                <Link to="/about" onClick={() => setIsMobileMenuOpen(false)}>{t('header.nav.about')}</Link>
                 <Link to="/#destinations" onClick={() => setIsMobileMenuOpen(false)}>{t('header.nav.destinations')}</Link>
                 <Link to="/#gallery" onClick={() => setIsMobileMenuOpen(false)}>{t('header.nav.gallery')}</Link>
                 <Link to="/#contact" onClick={() => setIsMobileMenuOpen(false)}>{t('header.nav.contact')}</Link>

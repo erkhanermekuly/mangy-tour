@@ -1,35 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import styles from './App.module.css';
 import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-import About from './components/About/About';
-import Destinations from './components/Destinations/Destinations';
-import Gallery from './components/Gallery/Gallery';
-import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton';
+import HomePage from './pages/HomePage/HomePage';
 import DestinationPage from './components/DestinationPage/DestinationPage';
 import AboutProject from './pages/AboutProject/AboutProject';
 
-function HomePage() {
+export default function App() {
   return (
-    <>
-      <Hero />
-      <div className="container">
-        <About />
-      </div>
-      <Destinations />
-      <div className="container">
-        <Gallery />
-        <Contact />
-      </div>
-    </>
-  );
-}
-
-export default function App(){
-  return (
-    <Router>
+    <Router basename="/mangy-tour">
       <div className={styles.app}>
         <Header />
         <main>
@@ -37,11 +17,13 @@ export default function App(){
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutProject />} />
             <Route path="/destination/:id" element={<DestinationPage />} />
+            {/* Добавь fallback на случай 404 */}
+            <Route path="*" element={<HomePage />} />
           </Routes>
         </main>
         <Footer />
         <ScrollToTopButton />
       </div>
     </Router>
-  )
+  );
 }

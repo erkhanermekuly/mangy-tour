@@ -7,13 +7,14 @@ export default function Gallery() {
     const { t } = useTranslation();
     const [selectedImage, setSelectedImage] = useState(null);
     
+    const base = process.env.PUBLIC_URL || '';
     const imgs = [
-        "/images/1.webp",
-        "/images/2.jpg",
-        "/images/3.jpg",
-        "/images/4.webp",
-        "/images/5.jpg",
-        "/images/6.jpeg"
+        `${base}/images/1.webp`,
+        `${base}/images/2.jpg`,
+        `${base}/images/3.jpg`,
+        `${base}/images/4.webp`,
+        `${base}/images/5.jpg`,
+        `${base}/images/6.jpeg`
     ];
     return (
         <section id="gallery" className={styles.gallery}>
